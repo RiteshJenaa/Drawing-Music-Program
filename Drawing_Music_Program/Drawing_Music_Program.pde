@@ -117,6 +117,8 @@ void draw()
   //
   Text();
   //
+  Text1();
+  //
   picDraw();
   //
 

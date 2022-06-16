@@ -20,6 +20,7 @@ float blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight;
 float redButtonX, redButtonY, redButtonWidth, redButtonHeight;
 float blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight;
 float textBoxX, textBoxY, textBoxWidth, textBoxHeight;
+float textBoxX1, textBoxY1, textBoxWidth1, textBoxHeight1;
 
 //
 
@@ -408,6 +409,17 @@ void Text()
   textAlign(CENTER, CENTER); 
   textFont(font, 15); // Change the number untils it fits
   text(textBox, textBoxX, textBoxY, textBoxWidth, textBoxHeight);
+  fill(resetWhite);
+}
+//End Text
+
+void Text1()
+{
+  rect (textBoxX1, textBoxY1, textBoxWidth1, textBoxHeight1);
+  fill(green); 
+  textAlign(CENTER, CENTER); 
+  textFont(font, 15); // Change the number untils it fits
+  text(textBox1, textBoxX1, textBoxY1, textBoxWidth1, textBoxHeight1);
   fill(resetWhite);
 }
 //End Text

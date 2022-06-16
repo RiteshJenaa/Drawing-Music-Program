@@ -165,5 +165,10 @@ void population()
   textBoxY = displayHeight*2.36/5;
   textBoxWidth =  displayWidth*1/7;
   textBoxHeight =  displayHeight*1/8;
+  //
+  textBoxX1 = quitButtonX;
+  textBoxY1 = displayHeight*1.53/5;
+  textBoxWidth1 =  displayWidth*1/10;
+  textBoxHeight1 =  displayHeight*1/25;
 }
 //End population
