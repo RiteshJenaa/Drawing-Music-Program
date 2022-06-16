@@ -15,11 +15,11 @@ float skipButtonX, skipButtonY, skipButtonWidth, skipButtonHeight;
 float amplifyButtonX, amplifyButtonY, amplifyButtonWidth, amplifyButtonHeight;
 float eraserButtonX, eraserButtonY, eraserButtonWidth, eraserButtonHeight;
 //
-float colorButtonX, colorButtonY, colorButtonWidth, colorButtonHeight;
 float greenButtonX, greenButtonY, greenButtonWidth, greenButtonHeight;
 float blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight;
 float redButtonX, redButtonY, redButtonWidth, redButtonHeight;
-float whiteButtonX, whiteButtonY, whiteButtonWidth, whiteButtonHeight;
+float blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight;
+float textBoxX, textBoxY, textBoxWidth, textBoxHeight;
 
 //
 
@@ -401,32 +401,13 @@ void eraserButton()
 }
 //End eraserButton
 
-void redSetupButton()
+void Text()
 {
-  if (mouseX>=redButtonX && mouseX<=redButtonX+redButtonWidth && mouseY>=redButtonY && mouseY<=redButtonY+redButtonHeight) {
-    noStroke();
-    fill(Darkred);
-    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
-  } else {
-
-    noStroke();
-    fill(red);
-    rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
-  }
+  rect (textBoxX, textBoxY, textBoxWidth, textBoxHeight);
+  fill(green); 
+  textAlign(CENTER, CENTER); 
+  textFont(font, 15); // Change the number untils it fits
+  text(textBox, textBoxX, textBoxY, textBoxWidth, textBoxHeight);
+  fill(resetWhite);
 }
-//End redSetupButton
-
-void whiteSetupButton()
-{
-  if (mouseX>=whiteButtonX && mouseX<=whiteButtonX+whiteButtonWidth && mouseY>=whiteButtonY && mouseY<=whiteButtonY+whiteButtonHeight) {
-    noStroke();
-    fill(gray);
-    rect(whiteButtonX, whiteButtonY, whiteButtonWidth, whiteButtonHeight);
-  } else {
-
-    noStroke();
-    fill(resetWhite);
-    rect(whiteButtonX, whiteButtonY, whiteButtonWidth, whiteButtonHeight);
-  }
-}
-//End whiteSetupButton
+//End Text

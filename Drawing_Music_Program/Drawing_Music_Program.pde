@@ -18,12 +18,12 @@ color purple = #E60AFF;
 PFont titleFont;
 float gain = 20.0;
 
-Boolean draw=false, draw1=false, draw2=false, draw3=false, turnONgreen = false, turnONstroke = false, turnONblue=false, turnONred=false;
+Boolean draw=false, draw1=false, draw2=false, draw3=false, turnONgreen = false, turnONstroke = false, turnONblue=false, turnONred=false, turnONblack=false;
 int reset=1;
 int squareWidth, squareHeight ;
 float drawingSurfaceX, drawingSurfaceY, drawingSurfaceWidth, drawingSurfaceHeight, drawingDiameter, drawingDiameter1; 
 
-color resetWhite=#FFFFFF, red=#FF0A03, green=#72F04D, yellow=#ECF04D, black=0, gold= #FFD700, turquoise= #AFEEEE, blue= #005477, orange = #ffa500, gray = #808080, Darkgreen = #528E52, Darkred = #F04430, quitButtonColour, paperButtonColour;
+color resetWhite=#FFFFFF, red=#FF7676, green=#72F04D, yellow=#ECF04D, black=0, gold= #FFD700, turquoise= #AFEEEE, blue= #005477, orange = #ffa500, gray = #808080, Darkgreen = #528E52, Darkred = #950C0C, quitButtonColour, paperButtonColour;
 //
 float rectXPic1, rectYPic1, rectWidthPic1, rectHeightPic1;
 float rectXPic2, rectYPic2, rectWidthPic2, rectHeightPic2;
@@ -114,6 +114,8 @@ void draw()
   amplifyButton();
   //
   eraserButton();
+  //
+  Text();
   //
   picDraw();
   //
@@ -266,14 +268,14 @@ void draw()
   if (turnONblue==true) {
 
     fill(turquoise);
-    noStroke();
+    stroke(turquoise);
     if (draw1==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight)  
       if (draw1==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );
   }
   if (turnONblue==true) {
 
     fill(turquoise);
-    noStroke();
+    stroke(turquoise);
     if (draw2==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight)  
       if (draw2==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight) rect (  mouseX, mouseY, squareWidth, squareHeight );
   }
@@ -292,7 +294,7 @@ void draw()
     rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
   } else {
 
-    noStroke();
+    stroke(turquoise);
     fill(turquoise);
     rect(blueButtonX, blueButtonY, blueButtonWidth, blueButtonHeight);
   }
@@ -376,7 +378,7 @@ void draw()
     noStroke();
     rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   } else {
-    fill(turquoise);
+    fill(Darkred);
     rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   }//
 
@@ -393,8 +395,82 @@ void draw()
     noStroke();
     rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   } else {
-    fill(turquoise);
+    fill(Darkred);
     rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
+  }//
+
+
+  //
+  //
+  //
+
+  if (turnONblack==true) {
+
+    fill(black);
+    stroke(black);
+    if (draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight)  
+      if (draw==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight) line( mouseX, mouseY, pmouseX, pmouseY );
+  } //End Line Draw
+  //
+  if (turnONblack==true) {
+
+    fill(black);
+    stroke(black);
+    if (draw1==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight)  
+      if (draw1==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight) ellipse( mouseX, mouseY, drawingDiameter, drawingDiameter );
+  }
+  if (turnONblack==true) {
+
+    fill(black);
+    stroke(black);
+    if (draw2==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight)  
+      if (draw2==true && mouseX>=drawingSurfaceX && mouseX<=drawingSurfaceX+drawingSurfaceWidth && mouseY>=drawingSurfaceY && mouseY<= drawingSurfaceY+drawingSurfaceHeight) rect (  mouseX, mouseY, squareWidth, squareHeight );
+  }
+  //
+  if (mouseX>=blackButtonX && mouseX<=blackButtonX+blackButtonWidth && mouseY>=blackButtonY && mouseY<=blackButtonY+blackButtonHeight) {
+    println("Black Button Enabled");
+    if (turnONblack==false) {
+      turnONblack=true;
+    } else {
+      turnONblack=false;
+    }
+  }
+  if (mouseX>=blackButtonX && mouseX<=blackButtonX+blackButtonWidth && mouseY>=blackButtonY && mouseY<=blackButtonY+blackButtonHeight) {
+    noStroke();
+    fill(gray);
+    rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
+  } else {
+
+    noStroke();
+    fill(black);
+    rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
+  }
+  //
+  if (turnONblack==true) {
+
+    fill(gray);
+    noStroke();
+    rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
+  } else {
+    fill(black);
+    rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
+  }//
+
+  if (turnONstroke==true) {
+    fill(gray);
+    colorMode(black);
+    rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
+    fill(resetWhite);
+  }
+
+  if (turnONblack==true) {
+
+    fill(gray);
+    noStroke();
+    rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
+  } else {
+    fill(black);
+    rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
   }//
 }
 
