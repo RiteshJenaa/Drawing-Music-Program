@@ -399,8 +399,9 @@ void eraserButton()
   }
   fill(resetWhite);
 }
-//End eraserButtred
+//End eraserButton
 
+void redSetupButton()
 {
   if (mouseX>=redButtonX && mouseX<=redButtonX+redButtonWidth && mouseY>=redButtonY && mouseY<=redButtonY+redButtonHeight) {
     noStroke();
