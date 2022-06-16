@@ -363,22 +363,22 @@ void draw()
   }
   if (mouseX>=redButtonX && mouseX<=redButtonX+redButtonWidth && mouseY>=redButtonY && mouseY<=redButtonY+redButtonHeight) {
     noStroke();
-    fill(red);
+    fill(Darkred);
     rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   } else {
 
     noStroke();
-    fill(Darkred);
+    fill(red);
     rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   }
   //
   if (turnONred==true) {
 
-    fill(red);
+    fill(Darkred);
     noStroke();
     rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   } else {
-    fill(Darkred);
+    fill(red);
     rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   }//
 
@@ -391,11 +391,11 @@ void draw()
 
   if (turnONred==true) {
 
-    fill(red);
+    fill(Darkred);
     noStroke();
     rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   } else {
-    fill(Darkred);
+    fill(red);
     rect(redButtonX, redButtonY, redButtonWidth, redButtonHeight);
   }//
 
@@ -437,22 +437,22 @@ void draw()
   }
   if (mouseX>=blackButtonX && mouseX<=blackButtonX+blackButtonWidth && mouseY>=blackButtonY && mouseY<=blackButtonY+blackButtonHeight) {
     noStroke();
-    fill(gray);
+    fill(black);
     rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
   } else {
 
     noStroke();
-    fill(black);
+    fill(gray);
     rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
   }
   //
   if (turnONblack==true) {
 
-    fill(gray);
+    fill(black);
     noStroke();
     rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
   } else {
-    fill(black);
+    fill(gray);
     rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
   }//
 
@@ -465,11 +465,11 @@ void draw()
 
   if (turnONblack==true) {
 
-    fill(gray);
+    fill(black);
     noStroke();
     rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
   } else {
-    fill(black);
+    fill(gray);
     rect(blackButtonX, blackButtonY, blackButtonWidth, blackButtonHeight);
   }//
 }

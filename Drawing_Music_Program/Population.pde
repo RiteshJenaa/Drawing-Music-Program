@@ -162,8 +162,8 @@ void population()
   blackButtonHeight = greenButtonHeight;
   //
   textBoxX = greenButtonX;
-  textBoxY = displayHeight*2.6/5;
+  textBoxY = displayHeight*2.36/5;
   textBoxWidth =  displayWidth*1/7;
-  textBoxHeight =  displayHeight*1/13;
+  textBoxHeight =  displayHeight*1/8;
 }
 //End population
